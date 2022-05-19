@@ -13,3 +13,7 @@
 - Added Media Resources Folder
 - Added Navbars (PC & Phone)
 - Added Dark Mode Structure
+
+### **19 May, 2022**
+
+- Navbar Bugfixes

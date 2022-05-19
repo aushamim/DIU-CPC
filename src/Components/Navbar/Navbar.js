@@ -47,6 +47,12 @@ const Navbar = () => {
             to="/"
             className="mx-4 hover:text-orange-500 transition ease-in-out duration-500"
           >
+            Verify Certificate
+          </Link>
+          <Link
+            to="/"
+            className="mx-4 hover:text-orange-500 transition ease-in-out duration-500"
+          >
             Login
           </Link>
         </div>
