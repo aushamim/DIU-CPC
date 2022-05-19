@@ -17,3 +17,4 @@
 ### **19 May, 2022**
 
 - Navbar Bugfixes
+- Restructured Navbar(Phone)

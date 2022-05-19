@@ -61,7 +61,7 @@ const Navbar = () => {
           <div className="flex items-center justify-center w-max group">
             <div className="bg-slate-200 dark:bg-slate-600 rounded-full z-10">
               {/* Profile Image */}
-              <img src={avatar_male} alt="DIU - CPC" className="w-8 2xl:w-12" />
+              <img src={avatar_male} alt="Avatar" className="w-8 2xl:w-12" />
             </div>
             {/* Notification Pulse */}
             <span className="w-8 2xl:w-12 h-8 2xl:h-12 border-4 border-slate-200 dark:border-slate-400 bg-orange-500 dark:bg-orange-300 rounded-full absolute top-0 left-7 xl:left-[72px] 2xl:left-[106px] opacity-75"></span>

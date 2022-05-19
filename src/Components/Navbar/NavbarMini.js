@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../Media/Images/CPC-Logo.png";
+import avatar_male from "../../Media/Images/avatar_male.png";
 
 const NavbarMini = () => {
   const [blurred, setBlurred] = useState(false);
@@ -52,40 +53,55 @@ const NavbarMini = () => {
         >
           {/* Menubar */}
           <div className="absolute bottom-5 right-5 z-20 w-56">
-            <div className="bg-white dark:bg-slate-800 shadow shadow-orange-200 dark:shadow-orange-900 dark:border border-orange-500 rounded-lg p-2 mb-2">
-              {/* Dashboard */}
-              <button className="flex items-center justify-center w-full">
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-home stroke-slate-500 dark:stroke-slate-300"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M6 17.6l-2 -1.1v-2.5" />
-                    <path d="M4 10v-2.5l2 -1.1" />
-                    <path d="M10 4.1l2 -1.1l2 1.1" />
-                    <path d="M18 6.4l2 1.1v2.5" />
-                    <path d="M20 14v2.5l-2 1.12" />
-                    <path d="M14 19.9l-2 1.1l-2 -1.1" />
-                    <line x1="12" y1="12" x2="14" y2="10.9" />
-                    <line x1="18" y1="8.6" x2="20" y2="7.5" />
-                    <line x1="12" y1="12" x2="12" y2="14.5" />
-                    <line x1="12" y1="18.5" x2="12" y2="21" />
-                    <path d="M12 12l-2 -1.12" />
-                    <line x1="6" y1="8.6" x2="4" y2="7.5" />
-                  </svg>
+            {/* Dashboard */}
+            <div className="mb-3">
+              <div className="grid grid-cols-4 px-2">
+                {/* User Info */}
+                <Link
+                  to="/"
+                  className="bg-white dark:bg-slate-800 w-12 h-12 shadow-lg shadow-orange-200 dark:shadow-orange-900 rounded-full"
+                >
+                  <img src={avatar_male} alt="Avatar" className="w-full" />
+                </Link>
+                <div className="h-12 col-span-2 grid grid-rows-3">
+                  <div className="text-sm row-span-2 font-semibold text-slate-700 dark:text-slate-300 bg-white bg-opacity-75 dark:bg-slate-700 shadow shadow-orange-200 dark:shadow-none px-2 py-1 w-max rounded-full flex items-center mb-1">
+                    Amjad Uddin
+                  </div>
+                  <div className="text-[10px] font-semibold text-amber-700 bg-amber-300 dark:bg-opacity-100 bg-opacity-75 w-max px-1 py-[2px] flex items-center rounded-full ml-[2px]">
+                    Admin
+                  </div>
                 </div>
-                <div className="font-semibold text-[10px] text-slate-700 dark:text-slate-300 ml-1">
-                  Dashboard
-                </div>
-              </button>
+                {/* Dashboard Icon */}
+                <Link to="/" className="flex items-center justify-center">
+                  <div className="w-10 h-10 bg-orange-100 dark:bg-slate-800 shadow shadow-orange-200 dark:shadow-orange-900 dark:border border-orange-500 rounded-full flex items-center justify-center group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon icon-tabler icon-tabler-home stroke-slate-500 dark:stroke-slate-300 group-hover:stroke-orange-700 dark:group-hover:stroke-orange-600"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M6 17.6l-2 -1.1v-2.5" />
+                      <path d="M4 10v-2.5l2 -1.1" />
+                      <path d="M10 4.1l2 -1.1l2 1.1" />
+                      <path d="M18 6.4l2 1.1v2.5" />
+                      <path d="M20 14v2.5l-2 1.12" />
+                      <path d="M14 19.9l-2 1.1l-2 -1.1" />
+                      <line x1="12" y1="12" x2="14" y2="10.9" />
+                      <line x1="18" y1="8.6" x2="20" y2="7.5" />
+                      <line x1="12" y1="12" x2="12" y2="14.5" />
+                      <line x1="12" y1="18.5" x2="12" y2="21" />
+                      <path d="M12 12l-2 -1.12" />
+                      <line x1="6" y1="8.6" x2="4" y2="7.5" />
+                    </svg>
+                  </div>
+                </Link>
+              </div>
             </div>
 
             <div className="bg-white dark:bg-slate-800 shadow shadow-orange-200 dark:shadow-orange-900 dark:border border-orange-500 rounded-lg grid grid-cols-3 gap-2 gap-y-5 p-2">
@@ -116,7 +132,7 @@ const NavbarMini = () => {
                   Home
                 </div>
               </Link>
-              {/* Profile */}
+              {/* Forum */}
               <Link
                 to="/"
                 className="flex items-center justify-center flex-col group"
@@ -134,12 +150,12 @@ const NavbarMini = () => {
                     strokeLinejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="7" r="4" />
-                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                    <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+                    <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
                   </svg>
                 </div>
                 <div className="font-semibold text-[10px] text-slate-700 dark:text-slate-300 mt-1">
-                  Profile
+                  Forum
                 </div>
               </Link>
               {/* Notifications */}
@@ -166,32 +182,6 @@ const NavbarMini = () => {
                 </div>
                 <div className="font-semibold text-[10px] text-slate-700 dark:text-slate-300 mt-1">
                   Notifications
-                </div>
-              </Link>
-              {/* Forum */}
-              <Link
-                to="/"
-                className="flex items-center justify-center flex-col group"
-              >
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-home stroke-slate-500 dark:stroke-slate-300 group-hover:stroke-orange-700 dark:group-hover:stroke-orange-600"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
-                    <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
-                  </svg>
-                </div>
-                <div className="font-semibold text-[10px] text-slate-700 dark:text-slate-300 mt-1">
-                  Forum
                 </div>
               </Link>
               {/* Events */}
@@ -277,6 +267,32 @@ const NavbarMini = () => {
                 </div>
                 <div className="font-semibold text-[10px] text-slate-700 dark:text-slate-300 mt-1">
                   Search
+                </div>
+              </Link>
+              {/* Settings */}
+              <Link
+                to="/"
+                className="flex items-center justify-center flex-col group"
+              >
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-home stroke-slate-500 dark:stroke-slate-300 group-hover:stroke-orange-700 dark:group-hover:stroke-orange-600"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div className="font-semibold text-[10px] text-slate-700 dark:text-slate-300 mt-1">
+                  Settings
                 </div>
               </Link>
               {/* Log In/Out */}
