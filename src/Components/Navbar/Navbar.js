@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../Media/Images/CPC-Logo.png";
 import avatar_male from "../../Media/Images/avatar_male.png";
 
 const Navbar = () => {
+  const [navAutoHide, setNavAutoHide] = useState(false);
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      setNavAutoHide(false);
+    } else {
+      setNavAutoHide(true);
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   return (
-    <div className="bg-white dark:bg-slate-800 shadow-md px-5 py-2">
+    <div
+      className={
+        navAutoHide
+          ? "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full -top-20"
+          : "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full top-0"
+      }
+    >
       <div className="grid grid-cols-5 w-3/4 mx-auto">
         {/* CPC Logo */}
         <Link to="/" className="flex items-center justify-center">
@@ -49,17 +67,11 @@ const Navbar = () => {
           >
             Verify Certificate
           </Link>
-          <Link
-            to="/"
-            className="mx-4 hover:text-orange-500 transition ease-in-out duration-500"
-          >
-            Login
-          </Link>
         </div>
 
         <div className="flex justify-center relative">
           <div className="flex items-center justify-center w-max group">
-            <div className="bg-slate-200 dark:bg-slate-600 rounded-full z-10">
+            <div className="bg-slate-200 rounded-full z-10">
               {/* Profile Image */}
               <img src={avatar_male} alt="Avatar" className="w-8 2xl:w-12" />
             </div>
@@ -151,7 +163,7 @@ const Navbar = () => {
                   to="/notifications"
                   className="w-full grid grid-cols-4 py-1"
                 >
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center relative">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="icon icon-tabler icon-tabler-bell stroke-slate-500 dark:stroke-slate-300"
@@ -167,6 +179,8 @@ const Navbar = () => {
                       <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
                       <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
                     </svg>
+                    {/* Notification Pulse */}
+                    <span className="animate-ping absolute top-1 right-3 block h-1 w-1 rounded-full ring-2 ring-orange-400 bg-orange-600 dark:ring-orange-200 dark:bg-orange-400"></span>
                   </div>
                   <div className="col-span-3 flex items-center">
                     Notifications

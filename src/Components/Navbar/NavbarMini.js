@@ -53,7 +53,7 @@ const NavbarMini = () => {
         >
           {/* Menubar */}
           <div className="absolute bottom-5 right-5 z-20 w-56">
-            {/* Dashboard */}
+            {/* Upper Section */}
             <div className="mb-3">
               <div className="grid grid-cols-4 px-2">
                 {/* User Info */}
@@ -104,7 +104,7 @@ const NavbarMini = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-800 shadow shadow-orange-200 dark:shadow-orange-900 dark:border border-orange-500 rounded-lg grid grid-cols-3 gap-2 gap-y-5 p-2">
+            <div className="bg-white dark:bg-slate-800 shadow shadow-orange-200 dark:shadow-orange-900 dark:border border-orange-500 rounded-lg grid grid-cols-3 gap-2 gap-y-5 py-4">
               {/* Home */}
               <Link
                 to="/"

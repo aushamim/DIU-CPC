@@ -18,3 +18,8 @@
 
 - Navbar Bugfixes
 - Restructured Navbar(Phone)
+
+### **20 May, 2022**
+
+- Added 404 Page & Route
+- Redesigned Scrollbar

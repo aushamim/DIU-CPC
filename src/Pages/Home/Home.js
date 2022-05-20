@@ -10,9 +10,9 @@ const Home = () => {
   const { refreshState, toggleRefresh, toggleTheme } = useAuth();
 
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 dark:text-white h-screen">
+    <div className="bg-slate-100 dark:bg-slate-900 dark:text-white h-[300vh]">
       <div>
-        <div className="hidden xl:block">
+        <div className="hidden xl:block mb-12 2xl:mb-16">
           <Navbar></Navbar>
         </div>
         <div className="xl:hidden">
@@ -24,6 +24,7 @@ const Home = () => {
             playground
       
       */}
+      lol
       <br />
       <br />
       <br />
