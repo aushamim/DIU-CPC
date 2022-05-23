@@ -6,7 +6,7 @@ import avatar_male from "../../Media/Images/avatar_male.png";
 const NavbarMini = () => {
   const [blurred, setBlurred] = useState(false);
   return (
-    <div>
+    <div className="">
       <div className="bg-white dark:bg-slate-800 shadow-sm p-3">
         {/* CPC Logo */}
         <Link to="/" className="flex items-center justify-center">
@@ -17,7 +17,7 @@ const NavbarMini = () => {
       <div>
         {/* Menu Button */}
         <button
-          className="z-20 absolute bottom-5 right-5 bg-white dark:bg-slate-800 shadow shadow-orange-200 dark:shadow-orange-900 dark:border border-orange-500 p-1 rounded-lg"
+          className="z-20 fixed bottom-5 right-5 bg-white dark:bg-slate-800 shadow shadow-orange-200 dark:shadow-orange-900 dark:border border-orange-500 p-1 rounded-lg"
           onClick={() => {
             setBlurred(true);
           }}
@@ -47,12 +47,12 @@ const NavbarMini = () => {
           }}
           className={
             blurred
-              ? "duration-300 absolute backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-100 transition origin-bottom-right"
-              : "duration-300 absolute backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-0 transition origin-bottom-right"
+              ? "duration-300 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-100 transition origin-bottom-right"
+              : "duration-300 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-0 transition origin-bottom-right"
           }
         >
           {/* Menubar */}
-          <div className="absolute bottom-5 right-5 z-20 w-56">
+          <div className="fixed bottom-5 right-5 z-20 w-56">
             {/* Upper Section */}
             <div className="mb-3">
               <div className="grid grid-cols-4 px-2">
