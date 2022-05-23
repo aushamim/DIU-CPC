@@ -4,14 +4,16 @@ import logo from "../../Media/Images/CPC-Logo.png";
 import avatar_male from "../../Media/Images/avatar_male.png";
 
 const Navbar = () => {
-  const [navAutoHide, setNavAutoHide] = useState(false);
+  const [navAutoHide, setNavAutoHide] = useState("top");
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      setNavAutoHide(false);
+    if (currentScrollPos < 100) {
+      setNavAutoHide("top");
+    } else if (prevScrollpos > currentScrollPos) {
+      setNavAutoHide("show");
     } else {
-      setNavAutoHide(true);
+      setNavAutoHide("hide");
     }
     prevScrollpos = currentScrollPos;
   };
@@ -19,7 +21,9 @@ const Navbar = () => {
   return (
     <div
       className={
-        navAutoHide
+        navAutoHide === "top"
+          ? "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full top-0"
+          : navAutoHide === "hide"
           ? "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full -top-20"
           : "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full top-0"
       }
@@ -44,7 +48,7 @@ const Navbar = () => {
             Profile
           </Link>
           <Link
-            to="/"
+            to="/search"
             className="mx-4 hover:text-orange-500 transition ease-in-out duration-500"
           >
             Search

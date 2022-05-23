@@ -6,7 +6,7 @@ import avatar_male from "../../Media/Images/avatar_male.png";
 const NavbarMini = () => {
   const [blurred, setBlurred] = useState(false);
   return (
-    <div className="">
+    <div>
       <div className="bg-white dark:bg-slate-800 shadow-sm p-3">
         {/* CPC Logo */}
         <Link to="/" className="flex items-center justify-center">
@@ -245,7 +245,7 @@ const NavbarMini = () => {
               </Link>
               {/* Search */}
               <Link
-                to="/"
+                to="/search"
                 className="flex items-center justify-center flex-col group"
               >
                 <div>

@@ -10,7 +10,8 @@ const Home = () => {
   const { refreshState, toggleRefresh, toggleTheme } = useAuth();
 
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 dark:text-white">
+    <div className="bg-slate-100 dark:bg-slate-900 dark:text-slate-200">
+      {/* Navbar */}
       <div>
         <div className="hidden xl:block mb-12 2xl:mb-16">
           <Navbar></Navbar>
@@ -20,6 +21,11 @@ const Home = () => {
         </div>
       </div>
 
+      {/* <div className="mb-12 2xl:mb-16">
+        <Navbar></Navbar>
+      </div> */}
+
+      {/* Body */}
       <div className="h-[300vh]">
         {/* 
       
