@@ -23,3 +23,7 @@
 
 - Added 404 Page & Route
 - Redesigned Scrollbar
+
+### **23 May, 2022**
+
+- Added Search Page
