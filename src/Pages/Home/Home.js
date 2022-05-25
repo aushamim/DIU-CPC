@@ -13,8 +13,9 @@ const Home = () => {
     <div className="bg-slate-100 dark:bg-slate-900 dark:text-slate-200">
       {/* Navbar */}
       <div>
-        <div className="hidden xl:block mb-12 2xl:mb-16">
+        <div className="hidden xl:block">
           <Navbar></Navbar>
+          <div className="h-12 2xl:h-16"></div>
         </div>
         <div className="xl:hidden">
           <NavbarMini></NavbarMini>

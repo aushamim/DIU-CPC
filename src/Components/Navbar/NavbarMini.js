@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../Media/Images/CPC-Logo.png";
 import avatar_male from "../../Media/Images/avatar_male.png";
+import Badge from "../Badge/Badge";
+import useAuth from "../../Hooks/useAuth";
 
 const NavbarMini = () => {
   const [blurred, setBlurred] = useState(false);
+  const { toggleTheme } = useAuth();
   return (
     <div>
       <div className="bg-white dark:bg-slate-800 shadow-sm p-3">
         {/* CPC Logo */}
         <Link to="/" className="flex items-center justify-center">
-          <img src={logo} alt="DIU - CPC" className="w-14 2xl:w-20" />
+          <img src={logo} alt="DIU - CPC" className="w-20 2xl:w-24" />
         </Link>
       </div>
 
@@ -25,8 +28,8 @@ const NavbarMini = () => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-menu-2 stroke-orange-700 dark:stroke-orange-600"
-            width="32"
-            height="32"
+            width="44"
+            height="44"
             viewBox="0 0 24 24"
             strokeWidth="3"
             fill="none"
@@ -47,12 +50,43 @@ const NavbarMini = () => {
           }}
           className={
             blurred
-              ? "duration-300 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-100 transition origin-bottom-right"
-              : "duration-300 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-0 transition origin-bottom-right"
+              ? "duration-200 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-100 transition origin-bottom-right"
+              : "duration-200 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-0 transition origin-bottom-right"
           }
         >
           {/* Menubar */}
           <div className="fixed bottom-5 right-5 z-20 w-56">
+            {/* Theme Test */}
+            <div className="mb-10">
+              <div className="flex justify-around">
+                <button
+                  className="outline outline-2 outline-orange-400 rounded-md px-2"
+                  onClick={() => {
+                    toggleTheme("light");
+                  }}
+                >
+                  Light
+                </button>
+                <button
+                  className="outline outline-2 outline-orange-400 rounded-md px-2"
+                  onClick={() => {
+                    toggleTheme("dark");
+                  }}
+                >
+                  Dark
+                </button>
+                <button
+                  className="outline outline-2 outline-orange-400 rounded-md px-2"
+                  onClick={() => {
+                    toggleTheme("system");
+                  }}
+                >
+                  System
+                </button>
+              </div>
+            </div>
+            {/* Theme Test End */}
+
             {/* Upper Section */}
             <div className="mb-3">
               <div className="grid grid-cols-4 px-2">
@@ -67,9 +101,7 @@ const NavbarMini = () => {
                   <div className="text-sm row-span-2 font-semibold text-slate-700 dark:text-slate-300 bg-white bg-opacity-75 dark:bg-slate-700 shadow shadow-orange-200 dark:shadow-none px-2 py-1 w-max rounded-full flex items-center mb-1">
                     Amjad Uddin
                   </div>
-                  <div className="text-[10px] font-semibold text-amber-700 bg-amber-300 dark:bg-opacity-100 bg-opacity-75 w-max px-1 py-[2px] flex items-center rounded-full ml-[2px]">
-                    Admin
-                  </div>
+                  <Badge role={"Admin"}></Badge>
                 </div>
                 {/* Dashboard Icon */}
                 <Link to="/" className="flex items-center justify-center">

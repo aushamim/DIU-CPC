@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./Hooks/AuthProvider";
 import Home from "./Pages/Home/Home";

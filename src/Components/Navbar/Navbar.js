@@ -8,7 +8,7 @@ const Navbar = () => {
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 100) {
+    if (currentScrollPos < 80) {
       setNavAutoHide("top");
     } else if (prevScrollpos > currentScrollPos) {
       setNavAutoHide("show");
@@ -106,7 +106,7 @@ const Navbar = () => {
                 {/* Dashboard */}
                 <Link
                   to="/admin/dashboard"
-                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 transition duration-300"
+                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 dark:hover:bg-slate-600 transition duration-300"
                 >
                   <div className="flex items-center justify-center">
                     <svg
@@ -140,7 +140,7 @@ const Navbar = () => {
                 {/* Profile */}
                 <Link
                   to="/user/iddddd"
-                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 transition duration-300"
+                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 dark:hover:bg-slate-600 transition duration-300"
                 >
                   <div className="flex items-center justify-center">
                     <svg
@@ -165,7 +165,7 @@ const Navbar = () => {
                 {/* Notifications */}
                 <Link
                   to="/notifications"
-                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 transition duration-300"
+                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 dark:hover:bg-slate-600 transition duration-300"
                 >
                   <div className="flex items-center justify-center relative">
                     <svg
@@ -193,7 +193,7 @@ const Navbar = () => {
                 {/* Settings */}
                 <Link
                   to="/settings"
-                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 transition duration-300"
+                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 dark:hover:bg-slate-600 transition duration-300"
                 >
                   <div className="flex items-center justify-center">
                     <svg
@@ -217,7 +217,7 @@ const Navbar = () => {
                 {/* Log Out */}
                 <Link
                   to="/settings"
-                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 transition duration-300"
+                  className="w-full grid grid-cols-4 py-1 px-2 hover:bg-slate-200 dark:hover:bg-slate-600 transition duration-300"
                 >
                   <div className="flex items-center justify-center">
                     <svg
