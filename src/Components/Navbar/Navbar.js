@@ -66,7 +66,7 @@ const Navbar = () => {
             Forum
           </Link>
           <Link
-            to="/"
+            to="/certificate"
             className="mx-4 hover:text-orange-500 transition ease-in-out duration-500"
           >
             Verify Certificate

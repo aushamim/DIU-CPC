@@ -27,3 +27,7 @@
 ### **23 May, 2022**
 
 - Added Search Page
+
+### **23 May, 2022**
+
+- Added Certificate Verification Page

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../Media/Images/CPC-Logo.png";
 import avatar_male from "../../Media/Images/avatar_male.png";
-import Badge from "../Badge/Badge";
+import Badge from "../Badge/BadgeMini";
 import useAuth from "../../Hooks/useAuth";
 
 const NavbarMini = () => {
@@ -247,7 +247,7 @@ const NavbarMini = () => {
               </Link>
               {/* Certificate Verify */}
               <Link
-                to="/"
+                to="/certificate"
                 className="flex items-center justify-center flex-col group"
               >
                 <div>

@@ -3,7 +3,7 @@ import EventCardSmall from "../../Components/EventCard/EventCardSmall";
 import ForumCardSmall from "../../Components/ForumCard/ForumCardSmall";
 import Navbar from "../../Components/Navbar/Navbar";
 import NavbarMini from "../../Components/Navbar/NavbarMini";
-import UserCard from "../../Components/UserCard/UserCard";
+import UserCard from "../../Components/UserCard/UserCardSmall";
 import useDocumentTitle from "../../Hooks/useDocumentTitle";
 
 const Search = () => {
@@ -53,6 +53,7 @@ const Search = () => {
           </option>
         </select>
       </div>
+
       <div className="flex justify-center mt-5 md:mt-16">
         <div className="bg-white dark:bg-slate-800 w-3/4 xl:w-2/5 p-2 flex items-center rounded-md shadow">
           {/* Search Icon */}
