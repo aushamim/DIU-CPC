@@ -4,6 +4,7 @@ import logo from "../../Media/Images/CPC-Logo.png";
 import avatar_male from "../../Media/Images/avatar_male.png";
 
 const Navbar = () => {
+  var width = window.innerWidth > 0 ? window.innerWidth : window.screen.width;
   const [navAutoHide, setNavAutoHide] = useState("top");
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
@@ -22,10 +23,10 @@ const Navbar = () => {
     <div
       className={
         navAutoHide === "top"
-          ? "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full top-0"
+          ? "fixed bg-white dark:bg-slate-800 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-3xl shadow-sm px-5 py-2 transition-[top] duration-300 w-full top-0 z-50"
           : navAutoHide === "hide"
-          ? "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full -top-20"
-          : "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full top-0"
+          ? "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full -top-20 z-50"
+          : "fixed bg-white dark:bg-slate-800 shadow-sm px-5 py-2 transition-[top] duration-300 w-full top-0 z-50"
       }
     >
       <div className="grid grid-cols-5 w-3/4 mx-auto">
@@ -69,13 +70,19 @@ const Navbar = () => {
             to="/certificate"
             className="mx-4 hover:text-orange-500 transition ease-in-out duration-500"
           >
-            Verify Certificate
+            {width > 1400 ? "Verify " : ""}Certificate
+          </Link>
+          <Link
+            to="/team"
+            className="mx-4 hover:text-orange-500 transition ease-in-out duration-500"
+          >
+            Team
           </Link>
         </div>
 
         <div className="flex justify-center relative">
           <div className="flex items-center justify-center w-max group">
-            <div className="bg-slate-200 rounded-full z-10">
+            <div className="bg-slate-200 rounded-full z-50">
               {/* Profile Image */}
               <img src={avatar_male} alt="Avatar" className="w-8 2xl:w-12" />
             </div>
@@ -101,7 +108,7 @@ const Navbar = () => {
             </div>
 
             {/* Dropdown Menu */}
-            <div className="absolute top-7 2xl:top-11 -right-4 xl:right-7 2xl:right-14 z-10 scale-0 group-hover:scale-100 origin-top transition p-2">
+            <div className="absolute top-7 2xl:top-11 -right-4 xl:right-7 2xl:right-14 z-50 scale-0 group-hover:scale-100 origin-top transition p-2">
               <div className="bg-slate-100 dark:bg-slate-700 font-semibold text-slate-700 dark:text-slate-300 w-36 2xl:w-40 text-sm py-2 rounded-md shadow-md">
                 {/* Dashboard */}
                 <Link
