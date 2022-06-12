@@ -10,6 +10,9 @@ import homeBanner3 from "./../../Media/Images/CarouselItem 3.JPG";
 import homeBanner4 from "./../../Media/Images/CarouselItem 4.JPG";
 import homeBanner5 from "./../../Media/Images/CarouselItem 5.JPG";
 
+import HomeCarousel from "../../Components/HomeCarousel/HomeCarousel";
+import CountDown from "../../Components/CountDown/CountDown";
+
 const randomBanner = () => {
   const flag = Math.floor(Math.random() * 5) + 1;
   if (flag === 1) {
@@ -82,6 +85,12 @@ const Home = () => {
             playground
       
       */}
+        <div className="mb-10">
+          <CountDown></CountDown>
+        </div>
+        <div className="mb-10">
+          <HomeCarousel></HomeCarousel>
+        </div>
         Upper Boundary
         <br />
         <br />

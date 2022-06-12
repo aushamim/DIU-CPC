@@ -31,3 +31,7 @@
 ### **23 May, 2022**
 
 - Added Certificate Verification Page
+
+### **12 June, 2022**
+
+- Added Carousel (Swiper)
