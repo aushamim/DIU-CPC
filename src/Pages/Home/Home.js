@@ -51,10 +51,12 @@ const Home = () => {
           <img src={randomBanner()} alt="" />
         </div>
 
-        <div className="flex max-w-max mx-auto -mt-36 backdrop-blur-3xl dark:backdrop-blur-lg rounded-md">
-          <div className="bg-white dark:bg-slate-800 p-5 rounded-md shadow-md bg-opacity-70 dark:bg-opacity-50">
-            <div className="font-medium">Daffodil International University</div>
-            <div className="font-semibold text-5xl">
+        <div className="flex max-w-max mx-auto -mt-7 md:-mt-20 xl:-mt-36 backdrop-blur-3xl dark:backdrop-blur-lg rounded-md">
+          <div className="bg-white dark:bg-slate-800 p-2 xl:p-5 rounded-md shadow-md bg-opacity-70 dark:bg-opacity-50">
+            <div className="font-medium text-xs xl:text-base">
+              Daffodil International University
+            </div>
+            <div className="font-semibold text-lg md:text-3xl xl:text-5xl">
               <span className="text-orange-500">C</span>omputer &{" "}
               <span className="text-orange-500">P</span>rogramming{" "}
               <span className="text-orange-500">C</span>lub

@@ -9,8 +9,8 @@ const NavbarMini = () => {
   const [blurred, setBlurred] = useState(false);
   const { toggleTheme } = useAuth();
   return (
-    <div>
-      <div className="bg-white dark:bg-slate-800 shadow-sm p-3">
+    <div className="">
+      <div className="bg-white dark:bg-slate-800 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-3xl shadow-sm p-3">
         {/* CPC Logo */}
         <Link to="/" className="flex items-center justify-center">
           <img src={logo} alt="DIU - CPC" className="w-20 2xl:w-24" />
@@ -50,8 +50,15 @@ const NavbarMini = () => {
           }}
           className={
             blurred
-              ? "duration-200 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-100 transition origin-bottom-right"
-              : "duration-200 fixed backdrop-blur-md bottom-0 right-0 z-20 h-screen w-screen scale-0 transition origin-bottom-right"
+              ? "fixed backdrop-blur bottom-0 right-0 z-20 h-screen w-screen duration-200 transition opacity-100"
+              : "fixed backdrop-blur bottom-0 right-0 z-20 h-screen w-screen duration-200 transition opacity-0 pointer-events-none"
+          }
+        ></div>
+        <div
+          className={
+            blurred
+              ? "fixed bottom-0 right-0 z-20 scale-100 transition origin-bottom-right"
+              : "fixed bottom-0 right-0 z-20 scale-0 transition origin-bottom-right"
           }
         >
           {/* Menubar */}
