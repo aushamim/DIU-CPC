@@ -10,6 +10,7 @@ import carouselItem5 from "./../../Media/Images/CarouselItem 5.JPG";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 import "swiper/css/pagination";
+import CountDown from "../CountDown/CountDown";
 
 const HomeCarousel = () => {
   return (
@@ -30,23 +31,29 @@ const HomeCarousel = () => {
         modules={[Autoplay, Pagination]}
       >
         <SwiperSlide>
-          <img src={carouselItem1} alt="Carousel 1" />
+          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+            <CountDown date="Jul 3, 2022 3:00:00"></CountDown>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={carouselItem2} alt="Carousel 2" />
-          <div className="bg-emerald-300">Slide 2</div>
+          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+            <CountDown date="Jul 4, 2022 3:00:00"></CountDown>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={carouselItem3} alt="Carousel 3" />
-          <div className="bg-emerald-300">Slide 3</div>
+          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+            <CountDown date="Jul 5, 2022 3:00:00"></CountDown>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={carouselItem4} alt="Carousel 4" />
-          <div className="bg-emerald-300">Slide 4</div>
+          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+            <CountDown date="Jul 6, 2022 3:00:00"></CountDown>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={carouselItem5} alt="Carousel 5" />
-          <div className="bg-emerald-300">Slide 5</div>
+          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+            <CountDown date="Jul 7, 2022 3:00:00"></CountDown>
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>

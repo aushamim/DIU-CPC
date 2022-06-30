@@ -106,7 +106,7 @@ const Home = () => {
       
       */}
         <div className="mb-10">
-          <CountDown></CountDown>
+          <CountDown date="Jul 2, 2022 3:00:00"></CountDown>
         </div>
         <div className="mb-10">
           <HomeCarousel></HomeCarousel>
