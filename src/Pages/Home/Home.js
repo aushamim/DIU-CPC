@@ -29,6 +29,28 @@ const randomBanner = () => {
     return homeBanner1;
   }
 };
+const backgroundImage = randomBanner();
+
+// Scrollbar Autohide
+var timer = null;
+window.addEventListener(
+  "scroll",
+  function () {
+    if (timer !== null) {
+      clearTimeout(timer);
+    }
+
+    var style = document.createElement("style");
+    style.innerHTML = `body::-webkit-scrollbar {width: 10px;}`;
+    document.head.appendChild(style);
+
+    timer = setTimeout(function () {
+      style.innerHTML = `body::-webkit-scrollbar {width: 5px;}`;
+      document.head.appendChild(style);
+    }, 2000);
+  },
+  false
+);
 
 const Home = () => {
   useDocumentTitle("Computer Programming Club - DIU");
@@ -40,8 +62,6 @@ const Home = () => {
       <div>
         <div className="hidden xl:block">
           <Navbar></Navbar>
-          {/* Space Fix */}
-          {/* <div className="h-12 2xl:h-16"></div> */}
         </div>
         <div className="xl:hidden">
           <NavbarMini></NavbarMini>
@@ -51,7 +71,7 @@ const Home = () => {
       {/* Top Banner */}
       <div className="">
         <div className="">
-          <img src={randomBanner()} alt="" />
+          <img src={backgroundImage} alt="" />
         </div>
 
         <div className="flex max-w-max mx-auto -mt-7 md:-mt-20 xl:-mt-36 backdrop-blur-3xl dark:backdrop-blur-lg rounded-md">

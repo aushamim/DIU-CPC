@@ -4,7 +4,7 @@
 
 /* Thinner & Round Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 ::-webkit-scrollbar-thumb {
   @apply bg-slate-300 dark:bg-slate-600;
@@ -22,18 +22,19 @@
   background-color: transparent;
 }
 
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0px;
+}
+
 body {
   @apply bg-slate-100 dark:bg-slate-900;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: overlay;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.scrollbar-hidden::-webkit-scrollbar {
-  width: 0px;
 }

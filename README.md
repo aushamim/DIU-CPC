@@ -35,3 +35,8 @@
 ### **12 June, 2022**
 
 - Added Carousel (Swiper)
+
+### **30 June, 2022**
+
+- Added DaisyUi
+- Added Auto Hide Scrollbar

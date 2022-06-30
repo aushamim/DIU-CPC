@@ -20,7 +20,7 @@ const CertificateVerify = () => {
 
       {/* Body */}
       <div className="flex justify-center mt-5 md:mt-16">
-        <div className="bg-white dark:bg-slate-800 w-3/4 xl:w-2/5 p-2 flex items-center rounded-md shadow">
+        <div className="bg-white dark:bg-slate-800 w-3/4 xl:w-2/5 px-3 py-2 flex items-center rounded-md shadow">
           {/* Search Icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
