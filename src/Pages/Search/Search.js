@@ -8,7 +8,7 @@ import useDocumentTitle from "../../Hooks/useDocumentTitle";
 
 const Search = () => {
   useDocumentTitle("Search");
-  var width = window.innerWidth > 0 ? window.innerWidth : window.screen.width;
+  const width = window.innerWidth > 0 ? window.innerWidth : window.screen.width;
   const [searchType, setSearchType] = useState(width < 768 ? "user" : "all");
 
   return (

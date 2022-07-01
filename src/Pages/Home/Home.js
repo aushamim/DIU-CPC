@@ -12,6 +12,8 @@ import homeBanner3 from "./../../Media/Images/CarouselItem 3.JPG";
 import homeBanner4 from "./../../Media/Images/CarouselItem 4.JPG";
 import homeBanner5 from "./../../Media/Images/CarouselItem 5.JPG";
 import Wings from "../../Components/Wings/Wings";
+import Advisors from "../../Components/Advisors/Advisors";
+import Team from "../../Components/Team/Team";
 
 const randomBanner = () => {
   const flag = Math.floor(Math.random() * 5) + 1;
@@ -91,17 +93,50 @@ const Home = () => {
       {/* Events Carousel */}
       <div className="my-20 mb-10">
         <div className="text-slate-600 dark:text-slate-200 text-2xl font-semibold text-center">
-          Ongoing Events
+          Ongoing<span className="text-slate-400 dark:text-slate-500">/</span>
+          Upcoming Events
         </div>
-        <EventsCarousel></EventsCarousel>
+        <div className="px-10 xl:px-0">
+          <EventsCarousel></EventsCarousel>
+        </div>
       </div>
-
+      <div className="text-slate-400 dark:text-slate-600 text-2xl font-semibold text-center my-10">
+        -- - --
+      </div>
       {/* Events Carousel */}
-      <div className="my-10">
+      <div>
         <div className="text-slate-600 dark:text-slate-200 text-2xl font-semibold text-center">
           CPC Wings
         </div>
         <Wings></Wings>
+      </div>
+      <div className="text-slate-400 dark:text-slate-600 text-2xl font-semibold text-center my-10">
+        -- - --
+      </div>
+      {/* Advisors */}
+      <div>
+        <div className="text-slate-600 dark:text-slate-200 text-2xl font-semibold text-center">
+          Meet The Advisors
+        </div>
+        <div className="text-slate-500 dark:text-slate-200 text-sm text-center mt-2">
+          The advising teachers of DIU Computer & Programming Club
+        </div>
+        <Advisors
+          advisors={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
+        ></Advisors>
+      </div>
+      <div className="text-slate-400 dark:text-slate-600 text-2xl font-semibold text-center my-10">
+        -- - --
+      </div>
+      {/* Team */}
+      <div>
+        <div className="text-slate-600 dark:text-slate-200 text-2xl font-semibold text-center">
+          Meet The Team
+        </div>
+        <div className="text-slate-500 dark:text-slate-200 text-sm text-center mt-2">
+          The core member of DIU Computer & Programming Club
+        </div>
+        <Team></Team>
       </div>
 
       {/* <div className="mb-12 2xl:mb-16">
