@@ -34,7 +34,7 @@ const Search = () => {
           }}
           name="searchType"
           id="searchType"
-          className="bg-slate-200 dark:bg-slate-800 rounded-md"
+          className="bg-slate-200 dark:bg-slate-800 rounded-md select text-3xl"
         >
           <option value="users" className="text-slate-600 dark:text-slate-300">
             Users
