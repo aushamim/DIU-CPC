@@ -12,7 +12,7 @@ import { Pagination, Autoplay } from "swiper";
 import "swiper/css/pagination";
 import CountDown from "../CountDown/CountDown";
 
-const HomeCarousel = () => {
+const EventsCarousel = () => {
   return (
     <div>
       <Swiper
@@ -20,7 +20,7 @@ const HomeCarousel = () => {
         slidesPerView={1}
         loop={true}
         // autoplay={{
-        //   delay: 3000,
+        //   delay: 8000,
         //   disableOnInteraction: false,
         // }}
         grabCursor={true}
@@ -31,27 +31,27 @@ const HomeCarousel = () => {
         modules={[Autoplay, Pagination]}
       >
         <SwiperSlide>
-          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
-            <CountDown date="Jul 3, 2022 3:00:00"></CountDown>
+          <div className="h-48 bg-white dark:bg-slate-800 flex items-center justify-center rounded-lg shadow-sm m-8">
+            <CountDown date="Oct 3, 2022 3:00:00"></CountDown>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+          <div className="h-48 bg-white dark:bg-slate-800 flex items-center justify-center rounded-lg shadow-sm m-8">
             <CountDown date="Jul 4, 2022 3:00:00"></CountDown>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+          <div className="h-48 bg-white dark:bg-slate-800 flex items-center justify-center rounded-lg shadow-sm m-8">
             <CountDown date="Jul 5, 2022 3:00:00"></CountDown>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+          <div className="h-48 bg-white dark:bg-slate-800 flex items-center justify-center rounded-lg shadow-sm m-8">
             <CountDown date="Jul 6, 2022 3:00:00"></CountDown>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-48 bg-white flex items-center justify-center rounded-lg shadow-sm m-10">
+          <div className="h-48 bg-white dark:bg-slate-800 flex items-center justify-center rounded-lg shadow-sm m-8">
             <CountDown date="Jul 7, 2022 3:00:00"></CountDown>
           </div>
         </SwiperSlide>
@@ -60,4 +60,4 @@ const HomeCarousel = () => {
   );
 };
 
-export default HomeCarousel;
+export default EventsCarousel;

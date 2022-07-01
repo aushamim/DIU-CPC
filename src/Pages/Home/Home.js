@@ -4,14 +4,14 @@ import Navbar from "../../Components/Navbar/Navbar";
 import useDocumentTitle from "../../Hooks/useDocumentTitle";
 import useAuth from "../../Hooks/useAuth";
 import NavbarMini from "../../Components/Navbar/NavbarMini";
+import EventsCarousel from "../../Components/EventsCarousel/EventsCarousel";
+
 import homeBanner1 from "./../../Media/Images/CarouselItem 1.JPG";
 import homeBanner2 from "./../../Media/Images/CarouselItem 2.JPG";
 import homeBanner3 from "./../../Media/Images/CarouselItem 3.JPG";
 import homeBanner4 from "./../../Media/Images/CarouselItem 4.JPG";
 import homeBanner5 from "./../../Media/Images/CarouselItem 5.JPG";
-
-import HomeCarousel from "../../Components/HomeCarousel/HomeCarousel";
-import CountDown from "../../Components/CountDown/CountDown";
+import Wings from "../../Components/Wings/Wings";
 
 const randomBanner = () => {
   const flag = Math.floor(Math.random() * 5) + 1;
@@ -88,6 +88,22 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Events Carousel */}
+      <div className="my-20 mb-10">
+        <div className="text-slate-600 dark:text-slate-200 text-2xl font-semibold text-center">
+          Ongoing Events
+        </div>
+        <EventsCarousel></EventsCarousel>
+      </div>
+
+      {/* Events Carousel */}
+      <div className="my-10">
+        <div className="text-slate-600 dark:text-slate-200 text-2xl font-semibold text-center">
+          CPC Wings
+        </div>
+        <Wings></Wings>
+      </div>
+
       {/* <div className="mb-12 2xl:mb-16">
         <Navbar></Navbar>
       </div> */}
@@ -105,12 +121,6 @@ const Home = () => {
             playground
       
       */}
-        <div className="mb-10">
-          <CountDown date="Jul 2, 2022 3:00:00"></CountDown>
-        </div>
-        <div className="mb-10">
-          <HomeCarousel></HomeCarousel>
-        </div>
         Upper Boundary
         <br />
         <br />
